@@ -1,0 +1,66 @@
+/* A cinematic opening and a selective portfolio. */
+header{background:linear-gradient(#0009,transparent);z-index:10}
+.hero{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;height:100svh;min-height:720px;padding:146px 6% 100px;overflow:hidden}
+.hero-stage{position:absolute;inset:0;width:100%;height:100%;z-index:-1;background:#000}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;object-position:center;opacity:1}
+.hero-stage:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0005 0%,transparent 32%,#0004 62%,#000b 100%);pointer-events:none}
+.hero-top{position:relative;z-index:1;margin:0;color:#e4e4e4}
+.hero-copy{display:block;padding:0;position:relative;z-index:1;width:100%;margin-top:120px}
+.hero h1{font-size:clamp(64px,8.5vw,132px);line-height:.98;font-weight:600;letter-spacing:-.065em;max-width:1250px;text-shadow:0 2px 30px #0004}
+.hero-bottom{display:flex;justify-content:space-between;max-width:100%;align-items:end;margin-top:36px;gap:30px}.hero-bottom p{display:block;color:#e0e0e0;font-size:14px}
+#motion{z-index:2;bottom:25px;right:6%;border:0;background:#0005;font-size:10px;padding:10px 14px}
+body:before{opacity:.15}.section{padding-top:110px;padding-bottom:110px}.work{border-top:0}
+.section-head h2,.stills .section-head h2{font-weight:500;letter-spacing:-.055em;font-size:clamp(40px,5.4vw,78px)}
+.filters{margin-bottom:42px;gap:8px 26px}.filters button{margin-right:0;font-size:11px}
+.project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 30px}
+.project-grid.curated>.project:first-child{grid-column:1/-1}
+.project-grid.curated>.project:first-child .project-image{aspect-ratio:2.12}
+.project-grid.curated>.project:first-child .project-caption{flex-direction:row-reverse;justify-content:space-between;align-items:baseline}
+.project-grid.curated>.project:first-child .project-caption h3{font-size:32px}
+.project-image{border-radius:2px}.project-caption{gap:8px}.project-caption h3{font-weight:500}.project-caption p{font-size:9px;color:#888}
+.play{width:50px;height:50px;bottom:22px;right:22px;background:#0002;border-color:#ffffff80}
+.archive-film-list{border-color:#ffffff18}.archive-film-list>summary{color:#999}
+.stills{background:transparent;border:0}.stills .section-head{margin-bottom:50px}
+.collection-overview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.collection-cover{padding:0;position:relative;background:#111;overflow:hidden;text-align:left;isolation:isolate}
+.stills .collection-cover img{width:100%;height:100%;aspect-ratio:3/4;object-fit:cover;max-height:none;transition:transform .8s,filter .8s;filter:saturate(.8)}
+.collection-cover:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 35%,#000b);z-index:0;pointer-events:none}
+.collection-cover:hover img{transform:scale(1.035);filter:saturate(1)}
+.collection-cover-copy{position:absolute;inset:0;padding:26px;display:flex;flex-direction:column;justify-content:flex-end;z-index:1}
+.collection-number{position:absolute;top:25px;left:26px;font-size:10px;letter-spacing:.16em;color:#fff}
+.collection-cover h3{font-size:clamp(25px,3vw,42px);font-weight:500;letter-spacing:-.04em;margin-bottom:10px}
+.collection-cover p{font-size:11px;color:#ddd;line-height:1.6;max-width:85%}.collection-arrow{position:absolute;right:24px;bottom:29px;font-size:23px}
+.collection-overview[hidden],#photography-view[hidden]{display:none}
+.back-collections{font-size:11px;background:none;padding:10px 0;color:#bbb;letter-spacing:.02em}
+.archive-tools{margin-top:20px}#archive-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 24px}.photo-label{display:none}
+.photo-tile img{aspect-ratio:4/5}.archive-current h3{font-weight:500}.archive-current span{color:#777}
+@media(max-width:650px){
+ header{background:linear-gradient(#000b,transparent)}.hero{height:94svh;min-height:650px;padding:125px 6% 88px}.hero-top{margin:0}.hero-copy{margin-top:130px;padding:0}.hero h1{font-size:clamp(48px,12vw,70px);line-height:1.02}.hero-bottom{margin-top:28px;gap:16px}.hero-bottom p{font-size:12px}.hero-bottom .round-link{font-size:10px}.hero-video{object-position:56% center}#motion{bottom:20px;right:5%}
+ .section{padding-top:70px;padding-bottom:70px}.filters{gap:5px 20px;margin-bottom:30px}.filters button{font-size:10px}.project-grid{grid-template-columns:1fr;gap:35px}.project-grid.curated>.project:first-child{grid-column:auto}.project-grid.curated>.project:first-child .project-image{aspect-ratio:16/10}.project-grid.curated>.project:first-child .project-caption{flex-direction:column;align-items:flex-start}.project-grid.curated>.project:first-child .project-caption h3{font-size:25px}.project-caption h3{font-size:23px}.play{width:42px;height:42px;bottom:15px;right:15px}
+ .collection-overview{grid-template-columns:1fr;gap:20px}.stills .collection-cover img{aspect-ratio:4/3}.collection-cover-copy{padding:24px}.collection-cover h3{font-size:33px}.stills .section-head{margin-bottom:32px}#archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+}
+@media(prefers-reduced-motion:reduce){.hero-video{display:block}}
+
+/* Full wordmark in the header; standalone symbol in the footer. */
+header .logo{min-height:48px;flex-shrink:0;background:transparent}
+header .logo img{display:block;width:210px;height:auto;object-fit:contain}
+footer .logo{display:flex;align-items:center;justify-content:center;width:52px;min-height:58px;background:transparent}
+footer .logo img{display:block;width:44px;height:auto;object-fit:contain}
+@media(min-width:651px) and (max-width:1050px){header .logo img{width:180px}}
+@media(max-width:650px){header .logo img{width:140px}footer .logo{width:44px;min-height:48px}footer .logo img{width:36px}}
+
+/* Portable edition: wordmark clearance inside the masthead. */
+header{height:96px;align-items:center;padding-top:0;padding-bottom:18px}
+header .logo{padding:8px 0;min-height:0;align-self:center}
+header .logo img{width:172px;height:42px;object-fit:contain;object-position:left center}
+@media(min-width:651px) and (max-width:1050px){header .logo img{width:154px;height:38px}}
+@media(max-width:650px){header{height:80px;padding-bottom:12px}header .logo img{width:128px;height:32px}nav{top:80px}}
+
+.hero-top,.hero-bottom{justify-content:flex-end}
+
+/* Keep the complete wordmark inside its own solid masthead. */
+header{position:relative;top:auto;height:104px;padding-top:0;padding-bottom:0;background:#000;align-items:center}
+header .logo{padding:0}
+header .logo img{width:172px;height:42px}
+.hero{height:calc(100svh - 104px);min-height:620px;padding-top:50px}
+@media(max-width:650px){header{height:84px;background:#000}header .logo img{width:128px;height:32px}nav{top:84px}.hero{height:calc(100svh - 84px);min-height:600px;padding-top:40px}}

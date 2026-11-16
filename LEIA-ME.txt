@@ -1,0 +1,15 @@
+KRIAM — EDIÇÃO PORTÁTIL
+
+Base: C:\Users\PATS\Music\KRIAM-site
+
+1. Extrair o ZIP completo.
+2. Abrir index.html em Chrome, Edge ou Firefox.
+3. Transportar sempre a pasta inteira, incluindo assets.
+
+Imagens, vídeos e fontes estão incluídos e funcionam offline. O formulário abre a aplicação de email: é necessária internet para enviar mensagens.
+
+Para alojar, enviar todo o conteúdo desta pasta ao alojamento.
+
+Revisão: novas capas dos sete filmes, localização PORTUGAL e logótipo com mais margem superior e inferior. Vídeos atuais preservados.
+
+Inclui Café e Maria do portfólio Pats Visuals em Full HD. O institucional Esproarte aparece apenas uma vez, usando a versão Full HD importada.
